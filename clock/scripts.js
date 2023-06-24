@@ -52,7 +52,7 @@ getTimeForTimezone("Europe/Budapest").then(time =>{
     }
 });
 function getTimeForTimezone(timezone) {
-    const url = `http://worldtimeapi.org/api/timezone/${timezone}`;
+    const url = `https://worldtimeapi.org/api/timezone/${timezone}`;
     return fetch(url)
       .then(response => response.json())
       .then(data => data.datetime)
