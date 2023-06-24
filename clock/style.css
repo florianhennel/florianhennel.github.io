@@ -1,0 +1,87 @@
+body{
+    background-color:#262626;
+    text-align: center;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-right: 10%;
+    gap: 20%;
+}
+#back{
+    width: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5e5e5e;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+#analogClock{
+    border-radius: 100%;
+    width: 35vw;
+    height: 35vw;
+    background: url(numberPlate.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(100%);
+    user-select: none;
+}
+#digitalClock{
+    display: none;
+    color: #fefefe;
+    width: 35vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12vw;
+}
+.hand{
+    position: relative;
+    top: 49%;
+    left: 50%;
+    transform-origin: left;
+    filter: invert(100%);
+}
+#minute{
+    width: 46%;
+    border: 2px solid white;
+    z-index: 200;
+}
+#hour{
+    width: 20%;
+    border: 2px solid white;
+    z-index: 100;
+    
+}
+#second{
+    width: 40%;
+    border: red solid 1px;
+    z-index: 300;
+}
+.timezones{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
+}
+.timezones div{
+    margin: 20%;
+    padding: 0.2rem;
+    background-color: #dfe3ee;
+    aspect-ratio: 2;
+    width: 100%;
+    text-align: center;
+    text-shadow: #1f2126;
+    text-transform: capitalize;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.5rem;
+}
+.timezones div:active{
+    background-color: #5cd2c6;
+}
+
