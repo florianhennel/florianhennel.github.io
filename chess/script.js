@@ -513,13 +513,12 @@ function main() {
         };
         let old = pieces[sP.y][sP.x];
         if ((index <9 || index > 56) && selectedPiece.piece == "pawn"){
-        let i = 5;
+        let i = white?1:5;
         pawnChoices.forEach(div =>{
-          div.style.display = "flex";  
-          if(!white){
-            div.setAttribute("style",`grid-area: ${i}/1/${i}/1;display:flex`)
-            div.firstChild.setAttribute("src",`./pictures/black${div.firstChild.classList[0]}.png`)
-          }
+          div.style.display = "flex";
+          div.setAttribute("style",`grid-area: ${i}/1/${i}/1;display:flex`)
+          div.firstChild.setAttribute("src",`./pictures/${white?"white":"black"}${div.firstChild.classList[0]}.png`)
+          
           i+=1;
         })
         let p = await pawnAtLastRow();
